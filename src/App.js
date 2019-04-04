@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from "./picture/devmountain.png"
+import "./Reset.css";
 import './App.css';
+import Allcars from './Cars/Cars';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div>
+        
+        <header className="nav" >
+        <img className="dev" src={logo} alt="logo"></img>
+        <h1 className="auto">Devmountain auto</h1>
+        <button className="sell">Sell</button>
+        <button className="cart">Cart</button>
+
+          <input className="search" type="text" placeholder="Search.."></input>
+
+
         </header>
+        <Allcars />
+    
       </div>
     );
   }
