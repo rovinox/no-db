@@ -6,11 +6,11 @@ export default class Sell extends Component {
     constructor() {
         super()
         this.state = {
-            make:"",
+            car:"",
             model:"",
             year:"",
             price:"",
-            picture:""
+            image:""
         }               
     }   
 
@@ -18,7 +18,7 @@ export default class Sell extends Component {
 
     handleMake = e => {
         this.setState({
-            make: e.target.value
+            car: e.target.value
 
         })
     }
@@ -39,20 +39,18 @@ export default class Sell extends Component {
     }
     handlePicture = e => {
         this.setState({
-            picture: e.target.value
+            image: e.target.value
         })
     }
     addCar = () => {
         console.log(this.state)
-        const {make,model,year,price,picture} = this.state
-        axios.post("/api/makeCar",make,model,year,price,picture).then(response => {
-            
-        })
+        const {car,model,year,price,image} = this.state
+        axios.post("/api/makeCar",{car,model,year,price,image}).then(this.props.backToHome())
         
     }
     
     render() {
-        const {make,model,year,price,picture} = this.state
+        
       
     return (
       <div className="data">

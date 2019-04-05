@@ -32,11 +32,14 @@ export default class Allcars extends Component {
           <div key={index} className="card">
             <div className="cmp">
             <p>Car: {car.car}</p>
+            <p>Year: {car.year}</p>
             <p>Model: {car.model}</p>
-            <p>Price: {car.pirce}</p>
+            <p>Price: {car.price}</p>
             </div>
             <img className="car-image" src={car.image} />
-            <button className="btn">Add To Cart</button>
+            <button className="btn1">Edit</button>
+            <button className="btn2">Remove</button>
+
             
 
           </div>

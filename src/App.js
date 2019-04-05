@@ -14,6 +14,15 @@ class App extends Component {
 
     }
   }
+
+
+    backToHome = () => {
+      this.setState({
+        page: "home"
+      })
+
+    }
+
   render() {
     return (
       <div>
@@ -31,7 +40,7 @@ class App extends Component {
         </header>
         { this.state.page === "home" ? <Allcars/> : null}
         { this.state.page === "cart" ? < Cart/>  : null}
-        { this.state.page === "sell" ? < Sell />  : null}
+        { this.state.page === "sell" ? < Sell  backToHome={this.backToHome}/>  : null}
     
       </div>
     );
