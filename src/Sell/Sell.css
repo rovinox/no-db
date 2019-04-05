@@ -1,0 +1,29 @@
+.data {
+    height: 500px;
+    width: 500px;
+    background: rgb(103, 195, 234);
+    margin: auto;
+    margin-top: 100px;
+}
+
+.sellinfo {
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+ input {
+     height: 30px;
+ }
+
+ .button2 {
+     display: block;
+     margin-left: 200px;
+     margin-top: 20px;
+     font-size: 30px;
+ }
+   

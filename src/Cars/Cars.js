@@ -1,5 +1,7 @@
-import Cars from "./Cars.json";
+
 import React, { Component } from 'react'
+import axios from "axios"
+import "./car.css"
 
 
 
@@ -8,31 +10,41 @@ export default class Allcars extends Component {
     constructor(){
         super()
         this.state = {
-            car:"",
-            model:"",
-            pirce:"",
-            year:"",
-            image:""
-        }
+            cars: []
+        }   
 
     }
+
+    componentDidMount(){
+      axios.get("/api/cars").then(res => {
+        
+        this.setState({
+          cars: res.data
+          
+        })
+      })
+    }
+
+
   render() {
-      let car = Cars.map(car => {
-         return (
-             <div>
-             <ul>
-                 <li>{car.car}</li>
-                 <li>{car.year}</li>
-                 <li>{car.model}</li>
-                 <li>{car.pirce}</li>
-             </ul>
-              <img src= {car.image} />
-             </div>
-         ) 
+      const carDisplay = this.state.cars.map((car, index) =>{
+        return (
+          <div key={index} className="card">
+            <div className="cmp">
+            <p>Car: {car.car}</p>
+            <p>Model: {car.model}</p>
+            <p>Price: {car.pirce}</p>
+            </div>
+            <img className="car-image" src={car.image} />
+            <button className="btn">Add To Cart</button>
+            
+
+          </div>
+        )
       })
     return (
-      <div>
-          <ul>{car}</ul>
+      <div className="main">
+          {carDisplay }
       </div>
     )
   }

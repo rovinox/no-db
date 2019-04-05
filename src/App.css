@@ -2,6 +2,7 @@
    
     height: 8vh;
     width: 100vw;
+    
 }
 
 .search{
@@ -12,16 +13,22 @@
     margin-top: 8px;
     margin-right: 16px;
     font-size: 25px;
+    margin-top: 20px;
 
   }
 .dev {
     height: 60px;
     width: 60px;
+    border-radius: 55%;
+    margin-top: 20px;
+    margin-left: 20px;
+    
 }
 .auto{
     color: #67C3EA;
     display: inline;
     font-size: 40px;
+    
 }
 .sell {
     color: #67C3EA;
@@ -31,6 +38,7 @@
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 10px;
+    margin-top: 20px;
    
 }
 .cart {
@@ -41,5 +49,17 @@
     border-right: 100px;
     margin-left: 100px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
+.cart:active {
+    
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+   }
+
+.sell:active {
+    
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+   }   
