@@ -5,13 +5,28 @@ const getAllCarrs =(req, res) => {
     res.json(cars)
 }
 const makeCar =(req, res) => {
-    console.log(req.body)
+    
     const newCars = cars.unshift(req.body)
     res.json(newCars)
 }
 
 
+const editCar = (req, res) => {
+    cars.map( (car, index) => {
+        if (req.body.index === index ){
+            car.car = req.body.car
+            car.model = req.body.model
+            car.year = req.body.year
+
+        }
+    })
+}
+
+
+
+
+
 
 module.exports = {
-    getAllCarrs,makeCar
+editCar, getAllCarrs, makeCar
 }

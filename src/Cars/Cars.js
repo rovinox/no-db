@@ -25,7 +25,9 @@ export default class Allcars extends Component {
       })
     }
 
+          
 
+            
   render() {
       const carDisplay = this.state.cars.map((car, index) =>{
         return (
@@ -37,8 +39,8 @@ export default class Allcars extends Component {
             <p>Price: {car.price}</p>
             </div>
             <img className="car-image" src={car.image} />
-            <button className="btn1">Edit</button>
-            <button className="btn2">Remove</button>
+            <button className="btn1" onClick={ () => {this.props.handleEdit(car.car,car.year,car.model, index)}}>Edit</button>
+            <button className="btn2" >Remove</button>
 
             
 

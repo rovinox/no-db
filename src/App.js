@@ -5,13 +5,16 @@ import "./Reset.css";
 import './App.css';
 import Allcars from './Cars/Cars';
 import Sell from "./Sell/Sell"
+import Edit_Car from './EditCar/Edit_Car';
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      page: "home"
-
+      page: "home",
+      selectedCar: null,
+      selectedYear: null,
+      selectedModel: null
     }
   }
 
@@ -19,6 +22,17 @@ class App extends Component {
     backToHome = () => {
       this.setState({
         page: "home"
+      })
+
+    }
+    handleEdit = (carName, carYear, carModel, index) => {
+      this.setState({
+        page: "edit",
+        selectedCar: carName,
+        selectedYear: carYear,
+        selectedModel: carModel,
+        index: index
+
       })
 
     }
@@ -38,10 +52,10 @@ class App extends Component {
 
 
         </header>
-        { this.state.page === "home" ? <Allcars/> : null}
+        { this.state.page === "home" ? <Allcars handleEdit={this.handleEdit}/> : null}
         { this.state.page === "cart" ? < Cart/>  : null}
         { this.state.page === "sell" ? < Sell  backToHome={this.backToHome}/>  : null}
-    
+        { this.state.page === "edit" ? <Edit_Car backToHome={this.backToHome} index={this.state.index}/> :null}
       </div>
     );
   }

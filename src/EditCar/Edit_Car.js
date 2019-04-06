@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
-import "./Sell.css"
+
 import axios from 'axios';
 
-export default class Sell extends Component {
+export default class EditCar extends Component {
     constructor() {
         super()
         this.state = {
             car:"",
             model:"",
             year:"",
-            price:"",
-            image:""
+            
         }               
     }   
 
@@ -32,26 +31,18 @@ export default class Sell extends Component {
             year: e.target.value
         })
     }
-    handlePrice = e => {
-        this.setState({
-            price: e.target.value
-        })
-    }
-    handlePicture = e => {
-        this.setState({
-            image: e.target.value
-        })
-    }
-    addCar = () => {
-        console.log(this.state)
-        const {car,model,year,price,image} = this.state
-        axios.post("/api/makeCar",{car,model,year,price,image}).then( () => {this.props.backToHome()})
-        
+
+
+    EditCar = () => {
+      const { index } = this.props
+      const {car,model,year,} = this.state
+      axios.put("/api/editcar",{car,model,year, index}).then( () => {this.props.backToHome()})
+
     }
     
     render() {
         
-      
+      console.log(this.state);
     return (
       <div className="data">
           <div className="sellinfo"> 
@@ -61,11 +52,8 @@ export default class Sell extends Component {
             <input type="text" onChange={this.handleModel}></input>
             <h1>Year</h1>
             <input type="number" onChange={this.handleYear}></input>
-            <h1>Price</h1>
-            <input type="number" onChange={this.handlePrice}></input>
-            <h1>Picture</h1>
-            <input type="text" onChange={this.handlePicture}></input> 
-            <button className="button2" onClick={this.addCar} >Submit</button>
+            <button className="button2" onClick={this.EditCar}>Submit</button>
+
             </div>
             
          
