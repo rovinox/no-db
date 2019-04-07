@@ -8,7 +8,7 @@ app.use(express.json())
 app.get("/api/cars", getAllCarrs)
 app.post("/api/cars", makeCar)
 app.put("/api/cars", editCar)
-app.delete("/api/cars", deleteCar)
+app.delete("/api/cars/:id", deleteCar)
 
 
 

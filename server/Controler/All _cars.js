@@ -25,9 +25,11 @@ const editCar = (req, res) => {
 
 const  deleteCar = (req, res) => {
    
-    let car = cars.findIndex(carz => carz.index === req.body.index)
-    cars.splice(cars, 1);
-    res.json(cars)
+    let id = req.params.id
+   cars.splice(id,1)
+    res.send(cars)
+    
+    
     
 }
 
