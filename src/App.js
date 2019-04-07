@@ -6,6 +6,8 @@ import './App.css';
 import Allcars from './Cars/Cars';
 import Sell from "./Sell/Sell"
 import Edit_Car from './EditCar/Edit_Car';
+import Dream_Cars from './DreamCars/Dream_Cars';
+
 
 class App extends Component {
   constructor(){
@@ -43,12 +45,14 @@ class App extends Component {
         
         <header className="nav" >
         <img className="dev" src={logo} alt="logo"></img>
-        <h1 className="auto">Devmountain auto</h1>
+        <h1 className="auto">Devmountain Auto</h1>
         <button className="sell" onClick={(e) => this.setState({page:"home"})}>Home</button>
         <button className="sell" onClick={(e) => this.setState({page:"sell"})}>Sell</button>
         <button onClick={(e) => this.setState({page:"cart"})} className="cart">Cart</button>
 
           <input className="search" type="text" placeholder="Search.."></input>
+          <button className="sell" onClick={(e) => this.setState({page:"dream"})}>Dream Cars</button>
+          
 
 
         </header>
@@ -56,6 +60,8 @@ class App extends Component {
         { this.state.page === "cart" ? < Cart/>  : null}
         { this.state.page === "sell" ? < Sell  backToHome={this.backToHome}/>  : null}
         { this.state.page === "edit" ? <Edit_Car backToHome={this.backToHome} index={this.state.index}/> :null}
+        { this.state.page === "dream" ? < Dream_Cars/>  : null}
+
       </div>
     );
   }

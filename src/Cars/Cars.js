@@ -25,10 +25,8 @@ export default class Allcars extends Component {
       })
     }
         handleDelete = (index) =>{
-          axios.delete("api/cars",{index}).then(res => {
-           
-          }).then( () => {this.props.backToHome()})
-          console.log(index);
+          axios.delete(`api/cars/${index}`).then( () => {this.props.backToHome()})
+          
         }
           
 
