@@ -36,7 +36,7 @@ export default class EditCar extends Component {
     EditCar = () => {
       const { index } = this.props
       const {car,model,year,} = this.state
-      axios.put("/api/editcar",{car,model,year, index}).then( () => {this.props.backToHome()})
+      axios.put("/api/cars",{car,model,year, index}).then( () => {this.props.backToHome()})
 
     }
     

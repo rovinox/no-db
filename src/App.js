@@ -52,7 +52,7 @@ class App extends Component {
 
 
         </header>
-        { this.state.page === "home" ? <Allcars handleEdit={this.handleEdit}/> : null}
+        { this.state.page === "home" ? <Allcars handleEdit={this.handleEdit} backToHome={this.backToHome}/> : null}
         { this.state.page === "cart" ? < Cart/>  : null}
         { this.state.page === "sell" ? < Sell  backToHome={this.backToHome}/>  : null}
         { this.state.page === "edit" ? <Edit_Car backToHome={this.backToHome} index={this.state.index}/> :null}

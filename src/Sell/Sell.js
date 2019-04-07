@@ -43,9 +43,9 @@ export default class Sell extends Component {
         })
     }
     addCar = () => {
-        console.log(this.state)
+        
         const {car,model,year,price,image} = this.state
-        axios.post("/api/makeCar",{car,model,year,price,image}).then( () => {this.props.backToHome()})
+        axios.post("/api/cars",{car,model,year,price,image}).then( () => {this.props.backToHome()})
         
     }
     

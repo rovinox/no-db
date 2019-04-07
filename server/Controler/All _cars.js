@@ -23,10 +23,18 @@ const editCar = (req, res) => {
 }
 
 
+const  deleteCar = (req, res) => {
+   
+    let car = cars.findIndex(carz => carz.index === req.body.index)
+    cars.splice(cars, 1);
+    res.json(cars)
+    
+}
+
 
 
 
 
 module.exports = {
-editCar, getAllCarrs, makeCar
+editCar, getAllCarrs, makeCar, deleteCar
 }
