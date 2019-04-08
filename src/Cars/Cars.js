@@ -5,6 +5,14 @@ import "./car.css"
 
 
 
+function srarchingfor(term) {
+  return function (x) {
+    return x.car.toLowerCase().includes(term.toLowerCase()) || !term
+    
+  }
+  
+}
+
 
 export default class Allcars extends Component {
     constructor(props){
@@ -39,7 +47,7 @@ export default class Allcars extends Component {
 
             
   render() {
-      const carDisplay = this.state.cars.map((car, index) =>{
+      const carDisplay = this.state.cars.filter(srarchingfor(this.state.term)).map((car, index) =>{
         
         return (
           <div key={index} className="card">
@@ -60,7 +68,7 @@ export default class Allcars extends Component {
       })
     return (
      <div>
-       <input type="text" className="search" placeholder="Search Your Car" onChange={this.searchHandler}></input>
+       <input type="text" className="search" placeholder="Search Your Car..." onChange={this.searchHandler} value={this.term}></input>
       <div className="main">
       
           {carDisplay }
