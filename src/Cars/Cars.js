@@ -7,10 +7,13 @@ import "./car.css"
 
 
 export default class Allcars extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-            cars: []
+            cars: [],
+           term: "" ,
+
+
         }   
 
     }
@@ -29,6 +32,10 @@ export default class Allcars extends Component {
           
         }
           
+        searchHandler = (event) =>{
+          this.setState({term: event.target.value})
+
+        }
 
             
   render() {
@@ -52,8 +59,12 @@ export default class Allcars extends Component {
         )
       })
     return (
+     <div>
+       <input type="text" className="search" placeholder="Search Your Car" onChange={this.searchHandler}></input>
       <div className="main">
+      
           {carDisplay }
+      </div>
       </div>
     )
   }

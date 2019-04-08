@@ -38,8 +38,10 @@ class App extends Component {
       })
 
     }
+    
 
   render() {
+    
     return (
       <div>
         
@@ -50,7 +52,7 @@ class App extends Component {
         <button className="sell" onClick={(e) => this.setState({page:"sell"})}>Sell</button>
         <button onClick={(e) => this.setState({page:"cart"})} className="cart">Cart</button>
 
-          <input className="search" type="text" placeholder="Search.."></input>
+          
           <button className="sell" onClick={(e) => this.setState({page:"dream"})}>Dream Cars</button>
           
 

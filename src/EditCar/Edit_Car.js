@@ -42,7 +42,7 @@ export default class EditCar extends Component {
     
     render() {
         
-      console.log(this.state);
+      
     return (
       <div className="data">
           <div className="sellinfo"> 

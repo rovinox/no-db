@@ -5,15 +5,16 @@
     
 }
 
-.search{
-    float: right;
-    padding: 6px;
+.search {
+    position: absolute; 
+    top:0;
+    right:1100px;
     background: #67C3EA;
     border-radius: 20px;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 20px;
+   
+   
 
   }
 .dev {
