@@ -23,8 +23,8 @@
 }
 
 .ins{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     margin: 20px;
     border-radius: 50%;
     border: 3px solid rgb(216, 66, 29);
@@ -35,4 +35,9 @@
     font-size: 30px;
     color: rgb(216, 66, 29);
     
+}
+
+.collins {
+    margin-top: 50px;
+
 }
