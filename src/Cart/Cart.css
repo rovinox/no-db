@@ -1,6 +1,38 @@
-.soon {
+.about {
     color:#67C3EA;
-    margin-top: 150px;
-    margin-left: 850px;
-    font-size: 60px;
+    font-size: 30px;
+    
+   
+    line-height: 1.8;
+    margin: 100px;
+    display: inline-block;
+
+}   
+.managers {
+    display: flex;
+    margin-left: 200px;
+    /* height: 300px;
+    width: 400px; */
+}
+.self{
+    display: inline;
+    margin: 30px;
+  
+    text-align: center;
+    
+}
+
+.ins{
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 3px solid rgb(216, 66, 29);
+    
+}
+
+.name{
+    font-size: 30px;
+    color: rgb(216, 66, 29);
+    
 }

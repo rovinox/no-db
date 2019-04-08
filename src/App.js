@@ -50,7 +50,7 @@ class App extends Component {
         <h1 className="auto">Devmountain Auto</h1>
         <button className="sell" onClick={(e) => this.setState({page:"home"})}>Home</button>
         <button className="sell" onClick={(e) => this.setState({page:"sell"})}>Sell</button>
-        <button onClick={(e) => this.setState({page:"cart"})} className="cart">Cart</button>
+        <button onClick={(e) => this.setState({page:"cart"})} className="cart">About</button>
 
           
           <button className="sell" onClick={(e) => this.setState({page:"dream"})}>Dream Cars</button>

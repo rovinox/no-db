@@ -20,6 +20,7 @@ const editCar = (req, res) => {
 
         }
     })
+    res.json(cars)
 }
 
 
@@ -27,7 +28,7 @@ const  deleteCar = (req, res) => {
    
     let id = req.params.id
    cars.splice(id,1)
-    res.send(cars)
+   res.json(cars)
     
     
     

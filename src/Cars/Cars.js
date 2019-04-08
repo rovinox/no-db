@@ -36,7 +36,11 @@ export default class Allcars extends Component {
       })
     }
         handleDelete = (index) =>{
-          axios.delete(`api/cars/${index}`).then( () => {this.props.backToHome()})
+          axios.delete(`api/cars/${index}`).then( (res) => {
+            
+            this.setState({cars: res.data}) 
+            this.props.backToHome()
+          })
           
         }
           
@@ -57,7 +61,7 @@ export default class Allcars extends Component {
             <p>Model: {car.model}</p>
             <p>Price: {car.price}</p>
             </div>
-            <img className="car-image" src={car.image} />
+            <img className="car-image" alt="car" src={car.image} />
             <button className="btn1" onClick={ () => {this.props.handleEdit(car.car,car.year,car.model, index)}}>Edit</button>
             <button className="btn2" onClick={ () => this.handleDelete(index)} >Remove</button>
 
