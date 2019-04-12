@@ -4,7 +4,7 @@ import "./Dream_Cars.css"
 export default class Dream_Cars extends Component {
   render() {
     return (
-      <div className="dream"> 
+      <main className="dream"> 
          
           <img className="car" src="https://dmi3w0goirzgw.cloudfront.net/gallery-images/1600/434000/800/434868.jpg" alt="car"></img>
           <img className="car" src="https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/gallery-migration/2014-04/EAB5CCC2-C5D7-48F1-9224-549434C247A0_0.jpg?itok=_xVwAFLl" alt="car"></img>
@@ -17,7 +17,7 @@ export default class Dream_Cars extends Component {
           <img className="car" src="https://cdn.bmwblog.com/wp-content/uploads/2016/10/BMW-Vision-Next-100-Los-Angeles-4.jpg" alt="car"></img>
           
 
-      </div>
+      </main>
     )
   }
 }

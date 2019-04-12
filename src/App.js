@@ -43,7 +43,7 @@ class App extends Component {
   render() {
     
     return (
-      <div>
+      <section>
         
         <header className="nav" >
         <img className="dev" src={logo} alt="logo"></img>
@@ -64,7 +64,7 @@ class App extends Component {
         { this.state.page === "edit" ? <Edit_Car backToHome={this.backToHome} index={this.state.index}/> :null}
         { this.state.page === "dream" ? < Dream_Cars/>  : null}
 
-      </div>
+        </section>
     );
   }
 }

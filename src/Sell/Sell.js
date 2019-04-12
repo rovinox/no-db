@@ -53,7 +53,7 @@ export default class Sell extends Component {
         
       
     return (
-      <div className="data">
+        <section className="data">
           <div className="sellinfo"> 
               <h1>Make</h1>
             <input type="text" onChange={this.handleMake} ></input>
@@ -69,7 +69,7 @@ export default class Sell extends Component {
             </div>
             
          
-      </div>
+     </section>
     )
   }
 }

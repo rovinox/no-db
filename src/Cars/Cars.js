@@ -54,7 +54,7 @@ export default class Allcars extends Component {
       const carDisplay = this.state.cars.filter(srarchingfor(this.state.term)).map((car, index) =>{
         
         return (
-          <div key={index} className="card">
+          <section key={index} className="card">
             <div className="cmp">
             <p>Car: {car.car}</p>
             <p>Year: {car.year}</p>
@@ -67,16 +67,16 @@ export default class Allcars extends Component {
 
             
 
-          </div>
+          </section>
         )
       })
     return (
      <div>
        <input type="text" className="search" placeholder="Search Your Car..." onChange={this.searchHandler} value={this.term}></input>
-      <div className="main">
+      <main className="main">
       
           {carDisplay }
-      </div>
+          </main>
       </div>
     )
   }
