@@ -5,7 +5,7 @@ import "./car.css"
 
 
 
-function srarchingfor(term) {
+function searching(term) {
   return function (x) {
     return x.car.toLowerCase().includes(term.toLowerCase()) || !term
     
@@ -40,6 +40,8 @@ export default class Allcars extends Component {
             
             this.setState({cars: res.data}) 
             this.props.backToHome()
+          }).catch(err =>{
+            console.log(err);
           })
           
         }
@@ -51,7 +53,7 @@ export default class Allcars extends Component {
 
             
   render() {
-      const carDisplay = this.state.cars.filter(srarchingfor(this.state.term)).map((car, index) =>{
+      const carDisplay = this.state.cars.filter(searching(this.state.term)).map((car, index) =>{
         
         return (
           <section key={index} className="card">
